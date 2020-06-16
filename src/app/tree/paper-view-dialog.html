@@ -1,0 +1,58 @@
+<h5 mat-dialog-title>Paper Details</h5>
+<div class="w3-small  w3-margin-top" mat-dialog-content>
+  <table>
+    <tbody>
+      <tr class="w3-margin-top w3-margin-bottom">
+        <td>Explanation Type:</td>
+        <td><b><span class="w3-margin-left">{{data.xai_type}}</span></b></td>
+      </tr>
+      <tr class="w3-margin-top w3-margin-bottom">
+        <td>Title:</td>
+        <td><b><span class="w3-margin-left">{{data.title}}</span></b></td>
+      </tr>
+      <tr class="w3-margin-top w3-margin-bottom">
+        <td>Paper link:</td>
+        <td><b><a class="w3-margin-left" href="{{data.link}}" target="_blank">{{data.link}}</a></b></td>
+      </tr>
+      <tr class="w3-margin-top w3-margin-bottom">
+        <td>Authors:</td>
+        <td><b><span class="w3-margin-left">{{data.authors}}</span></b></td>
+      </tr>
+      <tr class="w3-margin-top w3-margin-bottom">
+        <td>Year:</td>
+        <td><b><span class="w3-margin-left">{{data.year}}</span></b></td>
+      </tr>
+      <tr class="w3-margin-top w3-margin-bottom">
+        <td>Venue:</td>
+        <td><b><span class="w3-margin-left">{{data.venue}}</span></b></td>
+      </tr>
+      <tr class="w3-margin-top w3-margin-bottom">
+        <td>Type of paper:</td>
+        <td><b><span class="w3-margin-left">{{data.type}}</span></b></td>
+      </tr>
+      <tr class="w3-margin-top w3-margin-bottom">
+        <td>Citations:</td>
+        <td><b><span class="w3-margin-left">{{data.citation}}</span></b></td>
+      </tr>
+
+      <tr class="w3-margin-top w3-margin-bottom">
+        <td>Main NLP task:</td>
+        <td><b><span class="w3-margin-left">{{data.nlp_task_1}}</span></b></td>
+      </tr>
+      <tr class="w3-margin-top w3-margin-bottom">
+        <td style="min-width:100px">Operations:</td>
+        <td><b><span class="w3-margin-left">{{data.operations}}</span></b></td>
+      </tr>
+
+      <tr class="w3-margin-top w3-margin-bottom">
+        <td style="min-width:100px" class="w3-text-red">Evaluation Metrics:</td>
+        <td><b><span class="w3-margin-left">{{data.evaluation_metrics}}</span></b></td>
+      </tr>
+      
+      <!-- <tr class="w3-margin-top w3-margin-bottom">
+        <td colspan="2" style="widows: 100%"><iframe style="min-width:750px; min-height:600px" src="{{data.link}}"></iframe></td>
+      </tr> -->
+
+    </tbody>
+  </table>
+</div>

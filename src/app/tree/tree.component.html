@@ -1,0 +1,157 @@
+<div class="w3-padding">
+  <p class="w3-text-blue-grey"><b>Publications are grouped into four different tabs based on the type of their explanation</b>
+  </p>
+
+  <p>
+    <b>Remark</b>: the number of citations of each paper was obtained in May 2020.
+  </p>
+
+  <!-- <button mat-button (click)="viewPaper()">OPEN</button> -->
+  <div class="w3-small w3-margin-top">
+    <ngb-tabset [destroyOnHide]="false">
+      <ngb-tab>
+        <ng-template ngbTabTitle><b class="w3-text-indigo w3-hover-grayscale">Local Post-Hoc</b></ng-template>
+        <ng-template ngbTabContent>
+          <div class="w3-padding w3-light-grey">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Year</th>
+                    <th>Title</th>
+                    <th>Main Explainability</th>
+                    <th>Main Visualization</th>
+                    <th>Citations</th>
+                    <th>Venue</th>
+                    <th>Link</th>
+                    <th>Details</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr (click)="viewPaper(paper, 'Local Post-explaining')" class="w3-hover-blue-grey" *ngFor="let paper of papers['local-post-hoc']; index as i" style="cursor:pointer">
+                    <td>{{ paper.year}}</td>
+                    <td>{{ paper.title}}</td>
+                    <td class="w3-hover-text-blue" (click)="viewDefinition(paper.main_explainability)">{{paper.main_explainability}}</td>
+                    <td class="w3-hover-text-blue" >{{ paper.main_visualization}}</td>
+                    <td>{{ paper.citation}}</td>
+                    <td>{{ paper.venue | uppercase}}</td>
+                    <td><a class="w3-hover-text-white" href="{{paper.link}}" target="_blank">view</a></td>
+                    <td (click)="viewPaper(paper, 'Local post-hoc')"><span class="w3-small w3-text-blue w3-hover-text-white">Details</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </ng-template>
+      </ngb-tab>
+
+      <ngb-tab>
+        <ng-template ngbTabTitle><b class="w3-text-indigo w3-hover-grayscale">Local Self-Explaining</b></ng-template>
+        <ng-template ngbTabContent>
+          <div class="w3-padding w3-light-grey">
+              <div>
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Year</th>
+                      <th>Title</th>
+                      <th>Main Explainability</th>
+                      <th>Main Visualization</th>
+                      <th>Citations</th>
+                      <th>Venue</th>
+                      <th>Link</th>
+                      <th>Details</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr  (click)="viewPaper(paper, 'Local Self-explaining')" class="w3-hover-blue-grey"  *ngFor="let paper of papers['local-self']; index as i" style="cursor:pointer">
+                      <td>{{ paper.year}}</td>
+                      <td>{{ paper.title}}</td>
+                      <td class="w3-hover-text-blue" >{{ paper.main_explainability}}</td>
+                      <td class="w3-hover-text-blue" >{{ paper.main_visualization}}</td>
+                      <td>{{ paper.citation}}</td>
+                      <td>{{ paper.venue | uppercase}}</td>
+                      <td><a  class="w3-hover-text-white" href="{{paper.link}}" target="_blank">view</a></td>
+                      <td (click)="viewPaper(paper, 'Local Self-explaining')"><span class="w3-small w3-text-blue w3-hover-text-white">Details</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          </div>
+        </ng-template>
+      </ngb-tab>
+
+      <ngb-tab>
+        <ng-template ngbTabTitle><b class="w3-text-indigo w3-hover-grayscale">Global Post-Hoc</b></ng-template>
+        <ng-template ngbTabContent>
+          <div class="w3-padding w3-light-grey">
+              <div>
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Year</th>
+                      <th>Title</th>
+                      <th>Main Explainability</th>
+                      <th>Main Visualization</th>
+                      <th>Citations</th>
+                      <th>Venue</th>
+                      <th>Link</th>
+                      <th>Details</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr  (click)="viewPaper(paper, 'Global Post-hoc')" class="w3-hover-blue-grey" *ngFor="let paper of papers['global-post-hoc']; index as i" style="cursor:pointer">
+                      <td>{{ paper.year}}</td>
+                      <td>{{ paper.title}}</td>
+                      <td class="w3-hover-text-blue" >{{ paper.main_explainability}}</td>
+                      <td class="w3-hover-text-blue" >{{ paper.main_visualization}}</td>
+                      <td>{{ paper.citation}}</td>
+                      <td>{{ paper.venue | uppercase}}</td>
+                      <td><a  class="w3-hover-text-white" href="{{paper.link}}" target="_blank">view</a></td>
+                      <td (click)="viewPaper(paper, 'Global Post-hoc')"><span class="w3-small w3-text-blue w3-hover-text-white">Details</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          </div>
+        </ng-template>
+      </ngb-tab>
+
+      <ngb-tab>
+        <ng-template ngbTabTitle><b class="w3-text-indigo w3-hover-grayscale">Global Self-Explaining</b></ng-template>
+        <ng-template ngbTabContent>
+          <div class="w3-padding w3-light-grey">
+            <div>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Year</th>
+                    <th>Title</th>
+                    <th>Main Explainability</th>
+                    <th>Main Visualization</th>
+                    <th>Citations</th>
+                    <th>Venue</th>
+                    <th>Link</th>
+                    <th>Details</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr  (click)="viewPaper(paper, 'Global Self-explaining')" class="w3-hover-blue-grey" *ngFor="let paper of papers['global-self']; index as i" style="cursor:pointer">
+                    <td>{{ paper.year}}</td>
+                    <td>{{ paper.title}}</td>
+                    <td class="w3-hover-text-blue" >{{ paper.main_explainability}}</td>
+                    <td class="w3-hover-text-blue" >{{ paper.main_visualization}}</td>
+                    <td>{{ paper.citation}}</td>
+                    <td>{{ paper.venue | uppercase}}</td>
+                    <td><a  class="w3-hover-text-white" href="{{paper.link}}" target="_blank">view</a></td>
+                    <td (click)="viewPaper(paper, 'Global Self-explaining')"><span class="w3-small w3-text-blue w3-hover-text-white">Details</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </ng-template>
+      </ngb-tab>
+    </ngb-tabset>
+  </div>
+
+</div>

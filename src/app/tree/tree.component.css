@@ -1,0 +1,19 @@
+
+.def-card{
+  width: 600px;
+  height: 250px;
+  padding: 6px;
+  margin: 6px;
+}
+
+.def-card .title{
+  color               : black;
+  text-align : center;
+}
+
+.def-card .text{
+  font-size               : 18px;
+  color               : rgba(109, 114, 120, 1.0);
+  margin: 8px;
+}
+

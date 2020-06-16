@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to xai-nlp-website!');
+    expect(page.getTitleText()).toEqual('Welcome to interactive-rule-learning!');
   });
 
   afterEach(async () => {

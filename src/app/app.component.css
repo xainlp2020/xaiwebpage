@@ -1,0 +1,23 @@
+:host{
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+
+a {
+  text-decoration     : none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+
+.main{
+  font-size           : 14.0px;
+  font-family         : "Helvetica-Light", Helvetica, Arial, serif;
+  margin: 12px;
+}
+
